@@ -14,6 +14,7 @@ MusicMachine.prototype.getOscilators = function (n) {
     for (var i = 0; i < n; i++) {
         oscillators.push(context.createOscillator());
         oscillators[i].connect(gain);
+        oscillators[i].type='square';
     }
 
     //this.oscillators.forEach(function (oscillator) {oscillator.connect(gain);});
